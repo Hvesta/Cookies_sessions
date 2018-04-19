@@ -60,6 +60,10 @@ session_start();
   <div class="container-fluid text-right">
     <strong>Hello <?= $_SESSION["login"] ?? 'visitor'; ?>
     </strong>
-      <a button class="btn btn-info" href="deconnect.php">Déconnexion</a>  
+      <?php if(isset($_SESSION["login"])): ?>
+      <a button class="btn btn-info" href="deconnect.php">Déconnexion</a>
+      <?php else: ?>  
+      <a button class="btn btn-info" href="login.php">Connexion</a>
+      <?php endif;?>
   </div>
 </header>

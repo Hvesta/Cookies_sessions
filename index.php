@@ -1,6 +1,6 @@
 <?php
 require 'inc/head.php';
-require 'connect.php';
+
 
 if(empty($_SESSION['cart']))
 {
