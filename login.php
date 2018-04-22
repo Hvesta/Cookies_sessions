@@ -2,7 +2,10 @@
 require 'inc/head.php';
 if (!empty($_POST['loginname'])){
     $_SESSION['login'] = $_POST['loginname'];
-    header('Location: index.php');  
+}
+if(isset($_SESSION['login'])) {   
+    header('Location: index.php');
+    exit;
 }
 
 else {
